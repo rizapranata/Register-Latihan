@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setDate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/inputNama"
+        android:layout_width="346dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Nama"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="346dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/inputNama"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/inputNama"
+        app:layout_constraintTop_toBottomOf="@+id/inputNama" />
+
+    <EditText
+        android:id="@+id/inputAlamat"
+        android:layout_width="345dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Alamat"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/inputEmail"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/inputEmail"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+
+    <EditText
+        android:id="@+id/inputTgl"
+        android:layout_width="236dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Tgl Lahir"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="@+id/inputAlamat"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/inputAlamat"
+        app:layout_constraintTop_toBottomOf="@+id/inputAlamat" />
+
+    <RadioGroup
+        android:id="@+id/kelaminGroup"
+        android:layout_width="345dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/setDate"
+        app:layout_constraintStart_toStartOf="@+id/inputTgl"
+        app:layout_constraintTop_toBottomOf="@+id/inputTgl">
+
+        <RadioButton
+            android:id="@+id/radioLaki2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="15dp"
+            android:checked="true"
+            android:text="Laki - laki"
+            app:layout_constraintStart_toStartOf="@+id/inputTgl"
+            app:layout_constraintTop_toBottomOf="@+id/inputTgl" />
+
+        <RadioButton
+            android:id="@+id/radioPerem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Perempuan"
+            app:layout_constraintEnd_toEndOf="@+id/inputTgl"
+            app:layout_constraintTop_toBottomOf="@+id/inputTgl" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/inputPass"
+        android:layout_width="346dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/kelaminGroup"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/kelaminGroup"
+        app:layout_constraintTop_toBottomOf="@+id/kelaminGroup"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <Button
+        android:id="@+id/btnKirim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="send"
+        android:text="Kirim"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/inputPass"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputPass"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <Button
+        android:id="@+id/setDate"
+        android:layout_width="95dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="setDate"
+        android:text="Set Date"
+        app:layout_constraintBottom_toTopOf="@+id/kelaminGroup"
+        app:layout_constraintEnd_toEndOf="@+id/inputAlamat"
+        app:layout_constraintStart_toEndOf="@+id/inputTgl"
+        app:layout_constraintTop_toBottomOf="@+id/inputAlamat"
+        app:layout_constraintVertical_bias="0.444" />
+
+</android.support.constraint.ConstraintLayout>
